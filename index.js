@@ -28,6 +28,13 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+createMenuItem('tacos', 8, 'Lunch');
+createMenuItem('subway', 6, 'Lunch');
+createMenuItem('pasta', 15, 'dinner');
+
+console.log(createMenuItem('tacos', 8, 'Lunch'));
+console.log(createMenuItem('subway', 6, 'Lunch'));
+console.log(createMenuItem('pasta', 15, 'dinner'));
 
 
 
@@ -48,8 +55,21 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(string){
+    if(string == "teacher" || string == "student"){
+       return 13.5;
+   }else if(string == "public"){
+       return 16.2;
+    }
+  }
 }
+burger.discount('teacher');
+burger.discount('student');
+burger.discount('public');
+
+console.log(burger.discount('teacher'));
+console.log(burger.discount('student'));
+console.log(burger.discount('public'));
 
 
 
